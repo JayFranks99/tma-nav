@@ -156,7 +156,7 @@ body {
   position: absolute;
   max-height: 0;
   transition: max-height 0.3s ease;
-  top: 98px;
+  top: 78px;
   width: 100%;
   overflow-y: scroll;
 }
@@ -319,7 +319,7 @@ header .fas {
 .cart-jay {
   position: absolute;
   right: 20%;
-  top: 35px;
+  top: 30px;
 }
 
 .cart-jay .circle {
@@ -375,9 +375,11 @@ header .fas {
 }
 
 .active-2 {
-  border-right: solid 5px #d81d58 !important;
+  border-right: solid 3px #d81d58 !important;
   font-weight: bold;
   cursor: auto !important;
+  color: #d81d58 !important;
+  text-decoration: none !important;
 }
 
 @media (max-width: 1250px) {
@@ -541,7 +543,7 @@ header .fas {
   }
 
   .menu .dropdown a:hover,
-  .blog-link:hover {
+  .blog-link:hover, .tab button:hover {
     text-decoration: underline;
     color: #d81d58;
   }
@@ -563,13 +565,16 @@ header .fas {
     z-index: 10 !important;
   }
 
-  /* Hiding for now, needs sorting for mobile */
-  #flag-dropdown {
-    display: none !important;
+  .top-right-links {
+    display: none;
   }
 
   .logo-div {
     padding-left: 5%;
+  }
+
+  .header {
+    padding: 20px 0;
   }
 
   .header .logo {
@@ -577,8 +582,8 @@ header .fas {
   }
 
   .logo img {
-    width: 275px;
-    height: 85px;
+     width: 240px;
+    height: 60px;
   }
 
   /*
@@ -682,32 +687,33 @@ header .fas {
 /* Between these widths */
 
 @media screen and (max-width: 600px) {
-  .top-right-links {
-    display: none;
-  }
   #top-header .flex-container {
     align-items: center;
   }
   .logo img {
-    width: 215px;
-    height: 75px;
+    width: 200px;
+    height: 50px;
   }
 }
 
 @media screen and (max-width: 321px) {
-  .logo img {
-    height: 60px;
-    max-width: 170px;
-  }
+.logo img {
+    height: 40px;
+    max-width: 155px;
+}
 
   .cart-jay {
     position: absolute;
     right: 22.5%;
-    top: 30px;
+    top: 28px;
+  }
+
+  .cart-jay i {
+    font-size: 1.75rem !important;
   }
 
   .header .menu {
-    top: 84px;
+    top: 81px;
   }
 }
 
