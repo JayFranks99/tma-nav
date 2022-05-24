@@ -11,6 +11,44 @@ body {
 
 /* NAVIGATION STYLES START */
 
+/* clear button to #3FBABC;*/
+
+.j-btn {
+  background: none;
+  border: solid 3px #489A91;
+  color: #489A91;
+  border-radius: 1em;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 11px 25px;
+  font-size: 1.1rem;
+  transition: all 250ms ease-in-out;
+  -webkit-transition: all 250ms ease-in-out;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.j-btn.btn2 {
+  background: #489A91;
+  border: solid 3px #489A91;
+  color: white;
+}
+
+.j-btn.btn2:hover {
+  background: white;
+  border: solid 3px #489A91;
+  color: #489A91;
+}
+
+.shop-btn {
+  padding: 11px 20px !important;
+  margin: 0px 20px;
+  margin-right: 0;
+  font-size: 0.8rem !important;
+  font-weight: bold !important;
+  border: solid 3px #489A91;!important;
+}
+
 /* Main nav styles*/
 
 #top-header {
@@ -46,6 +84,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+}
+
+.menu .flex-container {
+  justify-content: space-evenly !important;
 }
 
 #nav-con {
@@ -167,7 +209,7 @@ body {
 }
 
 .header .dropdown {
-  background-color: #faeff3;
+  /* background-color: #fbf3f5; */
   height: 0;
   width: 100%;
   transition: height 0.4s ease;
@@ -434,9 +476,9 @@ header .fas {
     justify-content: space-between;
   }
 
-  #tests .flex-container {
+  /* #tests .flex-container {
     justify-content: space-evenly;
-  }
+  } */
 
   #tests img {
     width: 150px;
@@ -448,7 +490,7 @@ header .fas {
 
   /* SHOW DROPDOWN DIV ON HOVER */
   .menu .dropdown-div:hover .dropdown {
-    height: 230px;
+    height: 270px;
     box-shadow: 0px 8px 10px 0px #ddd, 0px 0px 10px -13px rgb(0 0 0 / 0%);
     -webkit-box-shadow: 0px 8px 10px 0px #ddd, 0px 0px 10px -13px rgb(0 0 0 / 0%);
   }
@@ -458,7 +500,11 @@ header .fas {
   }
 
   .menu #advice-dropdown:hover .dropdown {
-    height: 300px !important;
+    height: 275px !important;
+  }
+
+  .menu #about:hover .dropdown {
+    height: 110px !important;
   }
 
   #flag-dropdown .dropdown div,
@@ -554,7 +600,7 @@ header .fas {
 
   /* When input is checked, set height of dropdown menu - height allows transtion */
   .header .drop-btn:checked ~ .dropdown {
-    height: 560px;
+    height: 770px;
     border-bottom: solid 2px #f3f3f3 !important;
   }
 
@@ -563,20 +609,15 @@ header .fas {
     border-bottom: solid 2px #f3f3f3 !important;
   }
 
-  /* .header .drop-btn3:checked ~ .dropdown {
+  .header .drop-btn3:checked ~ .dropdown {
+    height: 770px;
+    border-bottom: solid 2px #f3f3f3 !important;
+  }
+
+  .header .drop-btn4:checked ~ .dropdown {
     height: 270px;
     border-bottom: solid 2px #f3f3f3 !important;
-  } */
-
-  /* .header .drop-btn4:checked ~ .dropdown {
-    height: 765px;
-    border-bottom: solid 2px #f3f3f3 !important;
-  } */
-
-  /* Custom transtion due to height, needs different value */
-  /* .header #tests, .header #works-dropdown  {
-      transition: height .5s ease;
-    } */
+  }
 
   /* Space between links for mobile, label targeted for better clicking functionality */
   .dropdown-div label,
@@ -676,12 +717,9 @@ header .fas {
 
 /* Style the tab */
 .tab {
-  /* float: left; */
-  /* border: 1px solid #ccc; */
-  background-color: #faeff3;
+  background-color: #fff6f9;
   width: 30%;
-  padding: 0;
-  /* height: 300px; */
+  padding: 0 !important;
 }
 
 /* Style the buttons inside the tab */
@@ -689,13 +727,13 @@ header .fas {
   display: block;
   background-color: inherit;
   color: black;
-  padding: 22px 16px;
+  padding: 25px;
   width: 100%;
-  /* border: none; */
   outline: none;
   text-align: left;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 0.9rem;
+  font-family: "Open Sans", Arial, sans-serif;
 }
 /* Change background color of buttons on hover */
 .tab button:hover {
@@ -709,14 +747,16 @@ header .fas {
 
 /* Style the tab content */
 .tabcontent {
-  background-color: #fbf3f5;
-  /* float: left; */
   padding: 0px 12px !important;
-  /* border: 1px solid #fbf3f5; */
   width: 70%;
   border-left: none;
   height: 310px;
   display: none;
+}
+
+
+#advice-mobile {
+  display: none !important;
 }
 
 @media (max-width: 600px) {
@@ -727,12 +767,16 @@ header .fas {
   .tabcontent {
     height: unset;
   }
+  #advice-mobile {
+  display: block !important;
 }
-.header .drop-btn3:checked ~ .dropdown {
-  height: 1100px;
-  border-bottom: solid 2px #f3f3f3 !important;
+
+  #advice-desktop {
+    display: none !important;
+  }
 }
 
 .tabcontent .flex-container {
   justify-content: space-around !important;
 }
+
